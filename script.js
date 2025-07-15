@@ -1,4 +1,3 @@
-// Aquí están todos los lugares organizados por categoría
 const categorias = {
   talleres: [
     { nombre: "Panadería", archivo: "imagenes/panaderia.jpg" },
@@ -24,12 +23,10 @@ const categorias = {
   ]
 };
 
-// Esta función muestra los botones (puntos) de cada lugar según la categoría
 function mostrarPuntos(categoria) {
   const container = document.getElementById("puntosContainer");
   container.innerHTML = ""; // borra lo anterior
 
-  // Para cada lugar de la categoría, se crea un botón
   categorias[categoria].forEach(lugar => {
     const punto = document.createElement("button"); // se crea el botón
     punto.textContent = "• " + lugar.nombre; // se le pone el nombre del lugar
